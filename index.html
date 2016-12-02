@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="HomeWork2.css" /> 
+    <script src="Homework2.js"></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div id="logo"><img src="Shop/thefox.png" /></div>
+            <div id="name"><h1>Лисолавочка</h1></div>
+        </header>
+        <!--<hr noshade size="3" />-->
+
+        <div class="content">
+            <section class="sec">
+                <article class="left">
+                    <p>Наша лавочка - это настоящая кладезь полезностей и чудес! Это только на первый взгляд кажется, будто здесь нет ничего особенного.</p>
+                    <p>На самом же деле каждая вещь особенна и уникальна, а главное - наполнена счастьем и лисьим теплом.</p>
+                    <h2>Как приобрести?</h2>
+                    <h3>Шаг первый</h3>
+                    <p>Перетащить выбранную полезность в корзину.</p>
+                    <h3>Шаг второй</h3>
+                    <p>Нажать на кнопку "Оформить заказ".</p>
+                    <h3>Шаг третий</h3>
+                    <p>После заполнения формы заказа нажать на кнопку "Отправить".</p>
+                    <h3>Готово!</h3>
+                    <p>Ждать звонок от нашего менеджера для уточнения деталей. Посылочка приедет очень скоро!</p>
+                </article>
+                <article class="right">
+                    <table>
+                        <caption>Что у нас есть:</caption>
+                        <tr>
+                            <td>
+                                <div id="apple" class="goods" data-count="0" data-price="1" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/apple.jpg" align="left" /> <p class="description">Самое вкусное лисичкино яблоко</p>
+                                    </div>
+                                    <div class="price"><button class="minus apple">-</button><span class="amount apple"></span><button class="plus apple">+</button><span class="cost apple">$1</span></div>
+                                </div>
+                             </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="leave" class="goods" data-count="0" data-price="1" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/leave.jpg" align="left" /> <p class="description">Лист клена осенний красиво засушеный</p>
+                                    </div>
+                                    <div class="price"><button class="minus leave">-</button><span class="amount leave"></span><button class="plus leave">+</button><span class="cost leave">$1</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="chrysanthemum" class="goods" data-count="0" data-price="0.8" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/Chrysanthemum.png" align="left" /> <p class="description">Цветок хризантемы, счастье приносящий</p>
+                                    </div>
+                                    <div class="price"><button class="minus chrysanthemum">-</button><span class="amount chrysanthemum"></span><button class="plus chrysanthemum">+</button><span class="cost chrysanthemum">$0.8</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="nut" class="goods" data-count="0" data-price="1.5" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/nut.jpg" align="left" /> <p class="description">Полезный орех из лисьего леса</p>
+                                    </div>
+                                    <div class="price"><button class="minus nut">-</button><span class="amount nut"></span><button class="plus nut">+</button><span class="cost nut">$1.5</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="mustache" class="goods" data-count="0" data-price="15" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/Mustache.png" align="left" /> <p class="description">Кошачий ус, желание исполняющий</p>
+                                    </div>
+                                    <div class="price"><button class="minus mustache">-</button><span class="amount mustache"></span><button class="plus mustache">+</button><span class="cost mustache">$15</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="geranium" class="goods" data-count="0" data-price="7" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/geranium.png" align="left" /> <p class="description">Цветок герани, злых духов изгоняющий</p>
+                                    </div>
+                                    <div class="price"><button class="minus geranium">-</button><span class="amount geranium"></span><button class="plus geranium">+</button><span class="cost geranium">$7</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="vine" class="goods" data-count="0" data-price="2" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/vine.jpg" align="left" /> <p class="description">Винная пробка на все случаи жизни</p>
+                                    </div>
+                                    <div class="price"><button class="minus vine">-</button><span class="amount vine"></span><button class="plus vine">+</button><span class="cost vine">$2</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="thread" class="goods" data-count="0" data-price="5" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/thread.jpeg" align="left" /> <p class="description">Красная шерстяная нить-оберег</p>
+                                    </div>
+                                    <div class="price"><button class="minus thread">-</button><span class="amount thread"></span><button class="plus thread">+</button><span class="cost thread">$5</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="feather" class="goods" data-count="0" data-price="2" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/feather.png" align="left" /> <p class="description">Перо на удачу для затыкания за ухо</p>
+                                    </div>
+                                    <div class="price"><button class="minus feather">-</button><span class="amount feather"></span><button class="plus feather">+</button><span class="cost feather">$2</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fizalis" class="goods" data-count="0" data-price="13" draggable="true">
+                                    <div class="product">
+                                        <img src="Shop/fizalis.png" align="left" /> <p class="description">Физалис волшебный чудотворный</p>
+                                    </div>
+                                    <div class="price"><button class="minus fizalis">-</button><span class="amount fizalis"></span><button class="plus fizalis">+</button><span class="cost fizalis">$13</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                <aside id="purchases">
+                    <h2>Что Вы выбрали:</h2>
+                    <div id="basket">
+                        <p id="empty">Пока что ваша корзинка покупок пуста. И совершенно зря!</p>
+                        <div id="sum">
+                            <br />Сумма покупочек: $<span id="print"></span><br /><br /><button id="orderButton">Оформить заказ</button>
+                        </div>
+                    </div>
+                    <div id="orderForm">
+                        <form name="orderFrm" action="/action.html" method="get">
+                            <fieldset>
+                                <legend>Оформление заказа</legend><br />
+                                <label for="nm">Имя:</label><input type="text" id="nm" name="userName" data-pattern="\S" placeholder ="Здесь может быть Ваше имя" />
+                                <span class="required"><sup>*</sup></span><br /><br />
+                                <label for="email">Email:</label><input type="email" name="userEmail" id="email" data-pattern="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b" placeholder="youremail@gmail.com" />
+                                <span class="required"><sup>*</sup></span><br /><br />
+                                <label for="tel">Телефон:</label><input type="tel" name="userTel" data-chars-allowed="0123456789-" id="tel" placeholder="+38 (012) 34-56-789" />
+                                <br /><br />
+                                <span class="required">*</span> обязательные для заполнения поля<br /><br />
+                                <input type="hidden" name="products" value="" />
+                                <input type="hidden" name="amount" value="" />
+                                <input type="submit" name="submit" id="submit" value="Отправить" />
+                            </fieldset>
+                        </form>
+                    </div>
+                </aside>
+            </section>
+        </div>
+        <footer>
+            <p>Покупая в Лисолавочке, ты делаешь мир лучше, а себя здоровей и счастливей!</p>
+            <div><img src="Shop/logo2.png" /></div>
+        </footer>
+    </div>
+
+</body>
+</html>
