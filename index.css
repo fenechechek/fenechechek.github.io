@@ -43,7 +43,6 @@
 
         .content {
             margin-top: 20px;
-            min-height: calc(100vh - 180px);
         }
 
         section {
@@ -254,6 +253,7 @@
         footer {
             height: 6%;
             position: relative;
+            margin-top: 15px;
         }
 
         footer p {
