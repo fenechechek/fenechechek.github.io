@@ -371,12 +371,14 @@ window.onload = function () {
         }
     }
 
-    form.addEventListener("submit", function (e) {
-        var e = e || window.event;
-        e.preventDefault();
+    form.addEventListener("submit", function () {
+        //var e = e || window.event;
+        //e.preventDefault();
         $("makeOrder").style.display = "none";
         $("done").style.display = "block";
         document.cookie = "saved-products=" + encodeURIComponent(arrSaved) +"; max-age=0";
-        document.cookie = "saved-counts = " + encodeURIComponent(arrSavedCounts) +"; max-age=0";
+        document.cookie = "saved-counts = " + encodeURIComponent(arrSavedCounts) + "; max-age=0";
+        $("prods").value = arrSaved.join();
+        $("amnts").value = arrSavedCounts.join();
     }, false);
 }
