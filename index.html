@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
@@ -134,36 +134,43 @@
                     </table>
                 </article>
                 <aside id="purchases">
-                    <h2>Что Вы выбрали:</h2>
-                    <div id="basket">
-                        <p id="empty">Пока что ваша корзинка покупок пуста. И совершенно зря!</p>
-                        <div id="sum">
-                            <br />Сумма покупочек: $<span id="print"></span><br /><br /><button id="orderButton">Оформить заказ</button>
-                        </div>
+                    <div id="done">
+                        <h2>Ура!</h2>
+                        <p>Теперь письмо с Вашим заказом отправлено.</p>
+                        <p>Это хорошо, лисички не подведут, а добра в мире прибавится!</p>
                     </div>
-                    <div id="orderForm">
-                        <form name="orderFrm" action="/action.html" method="get">
-                            <fieldset>
-                                <legend>Оформление заказа</legend><br />
-                                <label for="nm">Имя:</label><input type="text" id="nm" name="userName" data-pattern="\S" placeholder ="Здесь может быть Ваше имя" />
-                                <span class="required"><sup>*</sup></span><br /><br />
-                                <label for="email">Email:</label><input type="email" name="userEmail" id="email" data-pattern="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b" placeholder="email@example.com" />
-                                <span class="required"><sup>*</sup></span><br /><br />
-                                <label for="tel">Телефон:</label><input type="tel" name="userTel" data-chars-allowed="0123456789-" id="tel" placeholder="+38 (012) 34-56-789" />
-                                <br /><br />
-                                <span class="required">*</span> обязательные для заполнения поля<br /><br />
-                                <input type="hidden" name="products" value="" />
-                                <input type="hidden" name="amount" value="" />
-                                <input type="submit" name="submit" id="submit" value="Отправить" />
-                            </fieldset>
-                        </form>
+                    <div id="makeOrder">
+                        <h2>Что Вы выбрали:</h2>
+                        <div id="basket">
+                            <p id="empty">Пока что ваша корзинка покупок пуста. И совершенно зря!</p>
+                            <div id="sum">
+                                <br />Сумма покупочек: $<span id="print"></span><br /><br /><button id="orderButton">Оформить заказ</button>
+                            </div>
+                        </div>
+                        <div id="orderForm">
+                            <form name="orderFrm" action="/action.html" method="get">
+                                <fieldset>
+                                    <legend>Оформление заказа</legend><br />
+                                    <label for="nm">Имя:</label><input type="text" id="nm" name="userName" data-pattern="\S" placeholder="Здесь может быть Ваше имя" />
+                                    <span class="required"><sup>*</sup></span><br /><br />
+                                    <label for="email">Email:</label><input type="email" name="userEmail" id="email" data-pattern="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b" placeholder="email@example.com" />
+                                    <span class="required"><sup>*</sup></span><br /><br />
+                                    <label for="tel">Телефон:</label><input type="tel" name="userTel" data-chars-allowed="0123456789-" id="tel" placeholder="+38 (012) 34-56-789" />
+                                    <br /><br />
+                                    <span class="required">*</span> обязательные для заполнения поля<br /><br />
+                                    <input type="hidden" name="products" value="" />
+                                    <input type="hidden" name="amount" value="" />
+                                    <input type="submit" name="submit" id="submit" value="Отправить" />
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </aside>
             </section>
         </div>
         <footer>
             <p>Покупая в Лисолавочке, ты делаешь мир лучше, а себя здоровей и счастливей!</p>
-            <div><img src="Shop/logo.PNG" /></div>
+            <div><img src="Shop/logo.png" /></div>
         </footer>
     </div>
 
