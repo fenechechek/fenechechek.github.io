@@ -1,4 +1,4 @@
-﻿/// <reference path="Order.html" />
+/// <reference path="Order.html" />
 /// <reference path="Order.html" />
 /// <reference path="Shop/Order.html" />
 window.onload = function () {
@@ -17,6 +17,7 @@ window.onload = function () {
          arrSavedCounts = [],
          empty = $("empty"),
          arrButtons = purchases.getElementsByTagName("button"),
+         makeOrder = $("makeOrder"),
          form = document.orderFrm;
 
     //проверяем, есть ли cookies и, если есть, отрисовываем сохраненную корзину
@@ -28,6 +29,7 @@ window.onload = function () {
         if (savedProducts) {
 
             //массивы id продуктов и количества их в корзине
+            if (arrSaved && arrSavedCounts)
             arrSaved = savedProducts.split(","),
             arrSavedCounts = savedCounts.split(",");
 
@@ -201,7 +203,7 @@ window.onload = function () {
             arrCopy.push(id);
 
             //arrCopy.id;
-            purchases.insertBefore(copy, basket);
+            makeOrder.insertBefore(copy, basket);
 
             //вставить число единиц товара
             document.getElementsByClassName(id)[5].innerHTML = countPrint;
@@ -267,7 +269,7 @@ window.onload = function () {
 
                         //обнуляем счетчик товара и удаляем его из корзины
                         el.dataset.count = 0;
-                        purchases.removeChild(elRemove);
+                        makeOrder.removeChild(elRemove);
 
                         //удаляем запись о товаре из массива скопированных в корзину элементов
                         arrCopy.splice(0, 1);
@@ -367,8 +369,14 @@ window.onload = function () {
                 return false;
             }
         }
-        
-
     }
-}
 
+    form.addEventListener("submit", function (e) {
+        var e = e || window.event;
+        e.preventDefault();
+        $("makeOrder").style.display = "none";
+        $("done").style.display = "block";
+        document.cookie = "saved-products=" + encodeURIComponent(arrSaved) +"; max-age=0";
+        document.cookie = "saved-counts = " + encodeURIComponent(arrSavedCounts) +"; max-age=0";
+    }, false);
+}
