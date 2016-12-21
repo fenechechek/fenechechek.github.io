@@ -4,6 +4,18 @@
     <title></title>
     <link rel="stylesheet" href="index.css" /> 
     <script src="index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+                type: "POST", //Метод отправки
+                url: "send.php", //путь до php фаила отправителя
+                data: form_data
+            });
+        });
+    });
+    </script>
 </head>
 <body>
     <div class="main">
@@ -148,7 +160,7 @@
                             </div>
                         </div>
                         <div id="orderForm">
-                            <form name="orderFrm" action="/action.html" method="get">
+                            <form name="orderFrm" action="send.php" method="post">
                                 <fieldset>
                                     <legend>Оформление заказа</legend><br />
                                     <label for="nm">Имя:</label><input type="text" id="nm" name="userName" data-pattern="\S" placeholder="Здесь может быть Ваше имя" />
@@ -158,8 +170,8 @@
                                     <label for="tel">Телефон:</label><input type="tel" name="userTel" data-chars-allowed="0123456789-" id="tel" placeholder="+38 (012) 34-56-789" />
                                     <br /><br />
                                     <span class="required">*</span> обязательные для заполнения поля<br /><br />
-                                    <input type="hidden" name="products" value="" />
-                                    <input type="hidden" name="amount" value="" />
+                                    <input type="hidden" name="prods" id="prods" value="" />
+                                    <input type="hidden" name="amnts" id="amnts" value="" />
                                     <input type="submit" name="submit" id="submit" value="Отправить" />
                                 </fieldset>
                             </form>
