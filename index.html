@@ -2,20 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <link rel="stylesheet" href="index.css" /> 
-    <script src="index.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
-                type: "POST", //Метод отправки
-                url: "send.php", //путь до php фаила отправителя
-                data: form_data
-            });
-        });
-    });
-    </script>
+    <link rel="stylesheet" href="indx.css" /> 
+    <script src="indx.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="ajax.js"></script>-->
 </head>
 <body>
     <div class="main">
@@ -160,7 +150,7 @@
                             </div>
                         </div>
                         <div id="orderForm">
-                            <form name="orderFrm" action="send.php" method="post">
+                            <form name="orderFrm" id="orderFrm" method="post" action="send.php">
                                 <fieldset>
                                     <legend>Оформление заказа</legend><br />
                                     <label for="nm">Имя:</label><input type="text" id="nm" name="userName" data-pattern="\S" placeholder="Здесь может быть Ваше имя" />
