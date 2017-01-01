@@ -371,25 +371,12 @@ window.onload = function () {
         }
     }
 
-    form.addEventListener("submit", function (e) {
-        var e = e || window.event;
-        e.preventDefault();
-        $("makeOrder").style.display = "none";
-        $("done").style.display = "block";
+    form.addEventListener("submit", function () {
+        //$("makeOrder").style.display = "none";
+        //$("done").style.display = "block";
         document.cookie = "saved-products=" + encodeURIComponent(arrSaved) +"; max-age=0";
         document.cookie = "saved-counts = " + encodeURIComponent(arrSavedCounts) + "; max-age=0";
         $("prods").value = arrSaved.join();
         $("amnts").value = arrSavedCounts.join();
-
-        //var form_data = $(this).serialize(); //собераем все данные из формы
-        //    $.ajax({
-        //    type: "POST", //Метод отправки
-        //    url: "send.php", //путь до php фаила отправителя
-        //    data: form_data,
-        //    success: function () {
-        //        //код в этом блоке выполняется при успешной отправке сообщения
-        //        alert("Ваше сообщение отпрвлено!");
-        //    }
-        //});
     }, false);
 }
